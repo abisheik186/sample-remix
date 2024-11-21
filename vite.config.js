@@ -13,4 +13,10 @@ export default defineConfig({
       },
     }),
   ],
-});
+  server: {
+    port: 5173, // Ensure Vite's dev server runs on 5173
+    hmr: {
+      host: "localhost", // Use localhost for HMR
+      port: 5173, // Force HMR WebSocket to use 5173
+    },
+  },});
